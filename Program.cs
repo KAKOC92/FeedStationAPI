@@ -1,14 +1,14 @@
 using FDAPI.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Text.RegularExpressions;
+
 
 
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+//builder.Services.AddDbContext<FSAPIContext>(options =>
+//options.UseNpgsql(builder.Configuration.GetConnectionString("FSAPIContext")));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

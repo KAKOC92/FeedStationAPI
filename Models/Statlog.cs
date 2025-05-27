@@ -42,4 +42,6 @@ public partial class Statlog
     public string? Xver { get; set; }
 
     public short? Errcod { get; set; }
+
+
 }
