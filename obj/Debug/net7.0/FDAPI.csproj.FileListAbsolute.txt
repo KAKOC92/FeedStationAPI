@@ -477,3 +477,11 @@ D:\Projects\FeedStation API\obj\Debug\net7.0\refint\FDAPI.dll
 D:\Projects\FeedStation API\obj\Debug\net7.0\FDAPI.pdb
 D:\Projects\FeedStation API\obj\Debug\net7.0\FDAPI.genruntimeconfig.cache
 D:\Projects\FeedStation API\obj\Debug\net7.0\ref\FDAPI.dll
+D:\Projects\FeedStation API\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Projects\FeedStation API\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Projects\FeedStation API\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Projects\FeedStation API\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+D:\Projects\FeedStation API\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
+D:\Projects\FeedStation API\bin\Debug\net7.0\System.Diagnostics.DiagnosticSource.dll
+D:\Projects\FeedStation API\bin\Debug\net7.0\System.Text.Encodings.Web.dll
+D:\Projects\FeedStation API\bin\Debug\net7.0\runtimes\browser\lib\net7.0\System.Text.Encodings.Web.dll

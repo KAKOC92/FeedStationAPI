@@ -2,6 +2,7 @@ using FDAPI.Models;
 using Humanizer;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Server.IIS;
 using Microsoft.EntityFrameworkCore;
 //using FSAPIHelpers;
 using Newtonsoft.Json;
@@ -265,10 +266,16 @@ namespace FeedStationWebApi.Controllers
                             statlog.stntoiisop = preObj.stntoiisop;
                             statlog.proto = preObj.proto;
                             statlog.xver = preObj.xver;
-                            //statlog.xip = Request.GetIpAddress();
-                            statlog.xip = HttpContext.Connection.RemoteIpAddress.ToString();
+                            //statlog.xip = HttpContext.Request.Headers["X-Forwarded-For"];
+                            //statlog.xip = Request.Headers["CF-CONNECTING-IP"];
+                            //statlog.xip = HttpContext.Connection.RemoteIpAddress?.ToString();
+                            statlog.xip = Request.HttpContext.Connection.RemoteIpAddress?.ToString();
                             statlog.xua = Request.Headers["User-Agent"].ToString();
-
+                            // ::1 это значение при локальном запуске кода,
+                            // представляет собой сжатую версию адреса обратной связи IPV6,
+                            // 0:0:0:0:0:0:0:1эквивалентного адресу IPV4 127.0.0.1.
+                            // При развертывании этого на веб-сервере где-либо IP
+                            // изменится на реальный IP клиента.
                             if (stn == "err") 
                                 {
                              statlog.err = preObj.errcode;

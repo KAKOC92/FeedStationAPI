@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "D:\\Projects\\FeedStation API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8EAC931E-DB11-4C58-8E8C-51C949ED5FDD}|FDAPI.csproj|d:\\projects\\feedstation api\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{8EAC931E-DB11-4C58-8E8C-51C949ED5FDD}|FDAPI.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{8EAC931E-DB11-4C58-8E8C-51C949ED5FDD}|FDAPI.csproj|d:\\projects\\feedstation api\\controllers\\fsapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EAC931E-DB11-4C58-8E8C-51C949ED5FDD}|FDAPI.csproj|solutionrelative:controllers\\fsapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EAC931E-DB11-4C58-8E8C-51C949ED5FDD}|FDAPI.csproj|d:\\projects\\feedstation api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EAC931E-DB11-4C58-8E8C-51C949ED5FDD}|FDAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EAC931E-DB11-4C58-8E8C-51C949ED5FDD}|FDAPI.csproj|d:\\projects\\feedstation api\\models\\fsapicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EAC931E-DB11-4C58-8E8C-51C949ED5FDD}|FDAPI.csproj|solutionrelative:models\\fsapicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8EAC931E-DB11-4C58-8E8C-51C949ED5FDD}|FDAPI.csproj|d:\\projects\\feedstation api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{8EAC931E-DB11-4C58-8E8C-51C949ED5FDD}|FDAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EAC931E-DB11-4C58-8E8C-51C949ED5FDD}|FDAPI.csproj|d:\\projects\\feedstation api\\controllers\\fsapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EAC931E-DB11-4C58-8E8C-51C949ED5FDD}|FDAPI.csproj|solutionrelative:controllers\\fsapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EAC931E-DB11-4C58-8E8C-51C949ED5FDD}|FDAPI.csproj|d:\\projects\\feedstation api\\models\\fsapicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EAC931E-DB11-4C58-8E8C-51C949ED5FDD}|FDAPI.csproj|solutionrelative:models\\fsapicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8EAC931E-DB11-4C58-8E8C-51C949ED5FDD}|FDAPI.csproj|d:\\projects\\feedstation api\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{8EAC931E-DB11-4C58-8E8C-51C949ED5FDD}|FDAPI.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8EAC931E-DB11-4C58-8E8C-51C949ED5FDD}|FDAPI.csproj|d:\\projects\\feedstation api\\models\\station.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,12 +47,8 @@
       "RelativeMoniker": "D:0:0:{8EAC931E-DB11-4C58-8E8C-51C949ED5FDD}|FDAPI.csproj|solutionrelative:fdapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EAC931E-DB11-4C58-8E8C-51C949ED5FDD}|FDAPI.csproj|d:\\projects\\feedstation api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EAC931E-DB11-4C58-8E8C-51C949ED5FDD}|FDAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EAC931E-DB11-4C58-8E8C-51C949ED5FDD}|FDAPI.csproj|d:\\projects\\feedstation api\\models\\testpigscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EAC931E-DB11-4C58-8E8C-51C949ED5FDD}|FDAPI.csproj|solutionrelative:models\\testpigscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Projects\\FeedStation API\\Models\\TestPigsContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\TestPigsContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,17 +58,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "FSAPIController.cs",
               "DocumentMoniker": "D:\\Projects\\FeedStation API\\Controllers\\FSAPIController.cs",
               "RelativeDocumentMoniker": "Controllers\\FSAPIController.cs",
               "ToolTip": "D:\\Projects\\FeedStation API\\Controllers\\FSAPIController.cs",
               "RelativeToolTip": "Controllers\\FSAPIController.cs",
-              "ViewState": "AgIAAN0AAAAAAAAAAAAAAPMAAACDAAAAAAAAAA==",
+              "ViewState": "AgIAAAEBAAAAAAAAAAAAABUBAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-20T15:46:48.49Z",
               "IsPinned": true,
@@ -76,7 +76,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Projects\\FeedStation API\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -85,26 +85,24 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-10-15T15:48:25.949Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Projects\\FeedStation API\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\Projects\\FeedStation API\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-16T17:03:43.13Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "FSAPIContext.cs",
               "DocumentMoniker": "D:\\Projects\\FeedStation API\\Models\\FSAPIContext.cs",
               "RelativeDocumentMoniker": "Models\\FSAPIContext.cs",
@@ -113,12 +111,11 @@
               "ViewState": "AgIAAJUAAAAAAAAAAAAkwKsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-07T21:24:54.772Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Station.cs",
               "DocumentMoniker": "D:\\Projects\\FeedStation API\\Models\\Station.cs",
               "RelativeDocumentMoniker": "Models\\Station.cs",
@@ -127,21 +124,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T16:15:15.069Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": ".gitignore",
-              "DocumentMoniker": "D:\\Projects\\FeedStation API\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "D:\\Projects\\FeedStation API\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGoBAAAPAAAAAAAAAA==",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVDhPjVNLTgJBEG1lwpoFB3GNK9fieA48hD8iwT/ihwgSDAIHgAGXXsEV18CNzL/LquqZdsYM6kteXqcy3fWqpmpNRBgOhyABBEgpAFVKPIMUcYzUyOU\u002BXM/b2qtU3vkSfRjjZTCAMAw1A2LwzdFoBPP5HNqdzuL27n4juibWI\u002BUshBA1DIkhEx9iEorFotgslQqGYbxxAGFEqt1MxmPWJLbLZdZ\u002Bv89q5PMFPiTR6z2zdaxR0fXA0XTBcVywkb4fwHXjRteecIDNQ7UmExVYAdPcxYaqclN46na5WenMKjtlVnTYwcXlVYaDqImW9beD5N/TeGy32QHXm6hZ03ZgiSQHp2fnWQ4oBmJqWSqwAqZpZjt4aLXAD4J0VqyZsmoubfB8H2r1eoaD6NXZ9HcHO\u002BSA3f4AjifXl8rItOETM8ckB9WTWpYD9RdeZ1PWVWAHWXPQaDb59f/w8LiqHeh1pvGkCaP6qB8yXusoxmuNZ7XmII4O9vGuEF86osuDYRkpYQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-05-27T23:56:20.224Z",
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -153,7 +136,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
+              "Title": ".gitignore",
+              "DocumentMoniker": "D:\\Projects\\FeedStation API\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "D:\\Projects\\FeedStation API\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGoBAAAPAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVDhPjVNLTgJBEG1lwpoFB3GNK9fieA48hD8iwT/ihwgSDAIHgAGXXsEV18CNzL/LquqZdsYM6kteXqcy3fWqpmpNRBgOhyABBEgpAFVKPIMUcYzUyOU\u002BXM/b2qtU3vkSfRjjZTCAMAw1A2LwzdFoBPP5HNqdzuL27n4juibWI\u002BUshBA1DIkhEx9iEorFotgslQqGYbxxAGFEqt1MxmPWJLbLZdZ\u002Bv89q5PMFPiTR6z2zdaxR0fXA0XTBcVywkb4fwHXjRteecIDNQ7UmExVYAdPcxYaqclN46na5WenMKjtlVnTYwcXlVYaDqImW9beD5N/TeGy32QHXm6hZ03ZgiSQHp2fnWQ4oBmJqWSqwAqZpZjt4aLXAD4J0VqyZsmoubfB8H2r1eoaD6NXZ9HcHO\u002BSA3f4AjifXl8rItOETM8ckB9WTWpYD9RdeZ1PWVWAHWXPQaDb59f/w8LiqHeh1pvGkCaP6qB8yXusoxmuNZ7XmII4O9vGuEF86osuDYRkpYQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-05-27T23:56:20.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "HttpRequestExtension.cs",
               "DocumentMoniker": "D:\\Projects\\FeedStation API\\HttpRequestExtension.cs",
               "RelativeDocumentMoniker": "HttpRequestExtension.cs",
@@ -161,21 +156,19 @@
               "RelativeToolTip": "HttpRequestExtension.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T22:50:02.563Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T22:50:02.563Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FDAPI",
+              "DocumentIndex": 10,
+              "Title": "FDAPI.csproj",
               "DocumentMoniker": "D:\\Projects\\FeedStation API\\FDAPI.csproj",
               "RelativeDocumentMoniker": "FDAPI.csproj",
               "ToolTip": "D:\\Projects\\FeedStation API\\FDAPI.csproj",
               "RelativeToolTip": "FDAPI.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-27T22:46:32.219Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T22:46:32.219Z"
             },
             {
               "$type": "Document",
@@ -187,12 +180,11 @@
               "RelativeToolTip": "Models\\TestPigsContext.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAowDQAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T16:08:47.304Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T16:08:47.304Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Statlog.cs",
               "DocumentMoniker": "D:\\Projects\\FeedStation API\\Models\\Statlog.cs",
               "RelativeDocumentMoniker": "Models\\Statlog.cs",
@@ -200,12 +192,11 @@
               "RelativeToolTip": "Models\\Statlog.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAA9wC4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T00:23:11.205Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-07T00:23:11.205Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "TransferDataDTO.cs",
               "DocumentMoniker": "D:\\Projects\\FeedStation API\\Models\\TransferDataDTO.cs",
               "RelativeDocumentMoniker": "Models\\TransferDataDTO.cs",
@@ -213,12 +204,11 @@
               "RelativeToolTip": "Models\\TransferDataDTO.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAAADgAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T20:44:11.873Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-07T20:44:11.873Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Chk.cs",
               "DocumentMoniker": "D:\\Projects\\FeedStation API\\Models\\Chk.cs",
               "RelativeDocumentMoniker": "Models\\Chk.cs",
@@ -226,8 +216,7 @@
               "RelativeToolTip": "Models\\Chk.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T20:40:09.95Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-07T20:40:09.95Z"
             }
           ]
         }
