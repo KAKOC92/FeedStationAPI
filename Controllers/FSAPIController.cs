@@ -156,37 +156,7 @@ namespace FeedStationWebApi.Controllers
                 }
                 return new JsonResult(result);
             }
-
-
-        //[HttpPost("api/controller/statlog")]  //прокинуть маршпут
-        //public async Task<JsonResult> AddRecords(FSAPIContext context, TransferDataDTO dto)
-        //{
-        //    try
-        //    {                
-        //        await AddOperateRecords(context, dto);                
-        //        if (dto.stntoiisop == OperationType.settime) 
-        //        { 
-        //            await AddSetTime (context, dto);
-        //            return new JsonResult( new { Result = DateTime.Now.ToString("O") });  // время в формате ИСО
-        //        }
-                
-        //        if (dto.stntoiisop == OperationType.tdata) 
-        //        { 
-        //            await addTdata(context, dto);
-        //            return new JsonResult (new { Result = "Done" } );                     // возвращается длинный джсон, укоротить
-        //        }
-        //        //if (dto.stntoiisop == OperationType.lamp1On) { addLamp1On};
-        //        //if (dto.stntoiisop == OperationType.lamp1Off) { addLamp1Off};
-        //        await context.SaveChangesAsync();
-        //        return new JsonResult(Ok());
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return new JsonResult(StatusCode(500));
-        //    }
-        //}
-
+              
         private async Task AddOperateRecords(FSAPIContext context, TransferDataDTO dto)
         {
             Statlog statlog = new Statlog();
@@ -256,7 +226,7 @@ namespace FeedStationWebApi.Controllers
                     case "settime":  
                     case "operate":
                     case "err":
-                    
+                    case "tdata":
                         {
                             DateTime time = DateTime.Parse(preObj.xtime.ToString());
 
@@ -277,20 +247,20 @@ namespace FeedStationWebApi.Controllers
                             // При развертывании этого на веб-сервере где-либо IP
                             // изменится на реальный IP клиента.
                             if (stn == "err") 
-                                {
+                            {
                              statlog.err = preObj.errcode;
-                                }
-
+                            }                                                  
                             StatlogRecord(context, statlog);
+                            if (stn == "tdata")
+                            {
+                                return tDataRecords(context, preObj);
+                            }
+
                             dynamic result = new System.Dynamic.ExpandoObject();
                             result.xtime = DateTime.UtcNow.ToString("s") + DateTime.UtcNow.ToString("zzz");
                             result.timaut = GetTimeOut(context, preObj.kid.ToString());
                             return new JsonResult(result);
-
-
                         }
-
-                        
                 }
                
                 return new JsonResult(Ok());
@@ -301,6 +271,64 @@ namespace FeedStationWebApi.Controllers
                 Console.WriteLine(ex.Message); //выводит в консоль сообщение о том, что не так
                 return new JsonResult(StatusCode(500));
             }
+        }
+
+        private JsonResult tDataRecords(FSAPIContext context, dynamic preObj)
+        {
+            foreach (var js in preObj.xdata)
+            {
+                try
+                {
+                    DateTime time1 = DateTime.Parse(js.ts.ToString());
+
+                    Chk chk = new Chk();
+                    chk.Chip = js.tag;
+                    chk.Numstation = preObj.kid;
+                    chk.Datetimein = js.ts;
+                    chk.Datetimeout = time1.AddSeconds((double)js.dur);
+                    chk.Totalfeed = js.mass;
+                    chk.Xmode = js.mode;
+
+                    //String tag = js.GetType().GetProperty("tag");
+                    String tag = String.Empty;
+                    try
+                    {
+                        tag = js.tag;
+                    }
+                    catch { }
+
+                    if (!String.IsNullOrEmpty(tag))
+                    {
+                        Kntngnt kntngnt = context.Kntngnts.Where(x => x.Cpn.Equals(tag)).FirstOrDefault();
+
+                        if (kntngnt != null)
+                        {
+                            chk.Animid = kntngnt.Animid;
+                            Animal animal = context.Animals.Where(x => x.Animid == kntngnt.Animid).FirstOrDefault();
+                            if (animal != null)
+                            {
+                                chk.Tatno = animal.Tag;
+                            }
+                        }
+
+
+                        Console.WriteLine(js.tag);
+                    }
+
+                    context.Chks.Add(chk);
+
+                }
+                catch (Exception ex) { Console.WriteLine(ex.Message); }
+            }
+            if (preObj.xdata.Count > 0)
+            {
+                context.SaveChanges();
+            }
+            dynamic result1 = new System.Dynamic.ExpandoObject();
+            result1.xtime = DateTime.UtcNow.ToString("s") + DateTime.UtcNow.ToString("zzz");
+            result1.timaut = GetTimeOut(context, preObj.kid.ToString());
+            result1.tdata = "done";
+            return new JsonResult(result1);
         }
 
         private short GetTimeOut(FSAPIContext context, String kid)
@@ -328,5 +356,19 @@ namespace FeedStationWebApi.Controllers
             context.Statlogs.Add(statlog);
             context.SaveChanges();
         }
+
+        //private async void TdataRecord(FSAPIContext context, KntngntDTO dto)
+        //{
+        //    Kntngnt kntngnt = new Kntngnt();
+        //    kntngnt.Bid = dto.bid;
+        //    kntngnt.Animid = dto.animid;
+        //    kntngnt.Cpn = dto.cpn;
+        //    kntngnt.Cpn2 = dto.cpn2;
+        //    context.Add(kntngnt);// вот тут посмотреть
+        //    context.SaveChanges();
+            
+        //}
+
+        
     }
 }

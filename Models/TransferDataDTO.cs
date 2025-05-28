@@ -36,6 +36,7 @@ public class addTdataDTO
     public short Xmode { get; set; }         // режим (приучение=1; кормление=0).
 
     public short? Numstation { get; set; }
+
 }
 
 public class StatlogDTO
@@ -57,5 +58,17 @@ public class StatlogDTO
     public short err {  get; set; }
 
     //public String msgid { get; set; }     //код сообщения, пока не пишем   
+
+}
+// cv yb;t
+public class KntngntDTO
+{
+    public int bid { get; set; }
+
+    public int? animid { get; set; }
+
+    public string cpn { get; set; } = null!;
+
+    public int? cpn2 { get; set; }
 
 }
