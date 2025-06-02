@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 
 
 
-namespace FDAPI.Controllers
+namespace FeedStationWebApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
@@ -144,19 +144,19 @@ namespace FDAPI.Controllers
                 return new JsonResult(StatusCode(500), ex);
             }
         }
+        
 
-
-        [HttpGet("api/controller/statlog/id")]
-        public async Task<JsonResult> GetByKid(FSAPIContext context, long id)
-        {
-            var result = await context.Statlogs.FindAsync(id);
-            if (result == null)
+           [HttpGet("api/controller/statlog/id")]
+            public async Task<JsonResult> GetByKid(FSAPIContext context, long id)
             {
-                return new JsonResult(NotFound());
+                var result = await context.Statlogs.FindAsync(id);
+                if (result == null)
+                {
+                    return new JsonResult(NotFound());
+                }
+                return new JsonResult(result);
             }
-            return new JsonResult(result);
-        }
-
+              
         private async Task AddOperateRecords(FSAPIContext context, TransferDataDTO dto)
         {
             Statlog statlog = new Statlog();
@@ -169,14 +169,14 @@ namespace FDAPI.Controllers
             await context.SaveChangesAsync();
         }
 
-        private async Task AddSetTime(FSAPIContext context, TransferDataDTO dto)
+        private async  Task AddSetTime(FSAPIContext context, TransferDataDTO dto)
         {
             Statlog statlog = new Statlog();
             statlog.Xtime = dto.xtime.ToString();
             statlog.Kid = dto.kid.ToString();
             statlog.Proto = dto.proto.ToString();
             statlog.Xver = dto.xver.ToString();
-            statlog.Op = dto.stntoiisop.ToString();
+            statlog.Op = dto.stntoiisop.ToString();                                          
             context.Statlogs.AddAsync(statlog);
             await context.SaveChangesAsync();
         }
@@ -189,23 +189,23 @@ namespace FDAPI.Controllers
                 chk1.Datetimeout = chk.Datetimeout;
                 chk1.Chip = chk.Chip;
                 chk1.Totalfeed = chk.Totalfeed;
-                chk1.Datetimein = chk.Datetimeout.Value.AddSeconds(-chk.Duration);
+                chk1.Datetimein = chk.Datetimeout.Value.AddSeconds (-chk.Duration);
                 chk1.Xmode = chk.Xmode;
                 chk1.Numstation = chk.Numstation;
                 chk1.Animid = 333555;
                 chk1.Tatno = "tatoo";
-                context.Chks.AddAsync(chk1);
-            }
-            await context.SaveChangesAsync();
+                context.Chks.AddAsync(chk1);                                        
+            }                       
+             await context.SaveChangesAsync();
         }
 
         //От 26 мая
-
+        
         //Из запроса сеттайм вытащить номер станции, залезть по нему в базу и вытащить значение таймаут
         // если станции нет вернуть таймаут 300
         // Добавить модель для станций см скафолд с индусом
         // Всё должно писаться в базу до среды
-
+        
         // 28 мая
         // Потучить ip адрес
         // Замодлить таб с животными
@@ -214,8 +214,8 @@ namespace FDAPI.Controllers
         // тату тоже достать из таблицы animal, если информации нет, то поля пустые (животное пришло в 1 раз),
         // когда новое животное связ с чипом, в табл chk обновить записи и проставить animid и татуировку (апдейт после смены чипа)
 
-        [HttpPost("/[controller]/statlog")]
-        // Это основной метод
+        [HttpPost("api/controller/statlog")]  // Это основной метод
+        
         public async Task<JsonResult> AllRecords(FSAPIContext context, object obj)
         {
             try
@@ -227,10 +227,9 @@ namespace FDAPI.Controllers
 
                 dynamic preObj = JsonConvert.DeserializeObject<dynamic>(jstr)!;
                 Console.WriteLine(preObj.stntoiisop);
-                string stn = preObj.stntoiisop.ToString();
-                switch (stn)
-                {
-                    case "settime":
+                String stn = preObj.stntoiisop.ToString();
+                switch (stn) { 
+                    case "settime":  
                     case "operate":
                     case "err":
                     case "tdata":
@@ -253,10 +252,10 @@ namespace FDAPI.Controllers
                             // 0:0:0:0:0:0:0:1эквивалентного адресу IPV4 127.0.0.1.
                             // При развертывании этого на веб-сервере где-либо IP
                             // изменится на реальный IP клиента.
-                            if (stn == "err")
+                            if (stn == "err") 
                             {
-                                statlog.err = preObj.errcode;
-                            }
+                             statlog.err = preObj.errcode;
+                            }                                                  
                             StatlogRecord(context, statlog);
                             if (stn == "tdata")
                             {
@@ -269,14 +268,13 @@ namespace FDAPI.Controllers
                             return new JsonResult(result);
                         }
                 }
-
+               
                 return new JsonResult(Ok());
 
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message); //выводит в консоль сообщение о том, что не так
-                Console.WriteLine(ex.StackTrace);
                 return new JsonResult(StatusCode(500));
             }
         }
@@ -298,14 +296,14 @@ namespace FDAPI.Controllers
                     chk.Xmode = js.mode;
 
                     //String tag = js.GetType().GetProperty("tag");
-                    string tag = string.Empty;
+                    String tag = String.Empty;
                     try
                     {
                         tag = js.tag;
                     }
                     catch { }
 
-                    if (!string.IsNullOrEmpty(tag))
+                    if (!String.IsNullOrEmpty(tag))
                     {
                         Kntngnt kntngnt = context.Kntngnts.Where(x => x.Cpn.Equals(tag)).FirstOrDefault();
 
@@ -339,7 +337,7 @@ namespace FDAPI.Controllers
             return new JsonResult(result1);
         }
 
-        private short GetTimeOut(FSAPIContext context, string kid)
+        private short GetTimeOut(FSAPIContext context, String kid)
         {
             short result = 300;
             var stn = context.Stations.Where(x => x.Kid == kid).FirstOrDefault();
@@ -350,7 +348,7 @@ namespace FDAPI.Controllers
             return result;
         }
 
-        private async void StatlogRecord(FSAPIContext context, StatlogDTO dto)
+        private  async void  StatlogRecord(FSAPIContext context, StatlogDTO dto)
         {
             Statlog statlog = new Statlog();
             statlog.Kid = dto.kid;
@@ -365,17 +363,6 @@ namespace FDAPI.Controllers
             context.SaveChanges();
         }
 
-
-        [HttpGet("/[controller]/animid")]
-        public async Task<JsonResult> GetByAnimid(int animid)
-        {
-            Console.WriteLine("----");
-            Console.WriteLine(animid);
-            Console.WriteLine("----");
-
-            return new JsonResult(567);
-        }
-
         //private async void TdataRecord(FSAPIContext context, KntngntDTO dto)
         //{
         //    Kntngnt kntngnt = new Kntngnt();
@@ -385,9 +372,9 @@ namespace FDAPI.Controllers
         //    kntngnt.Cpn2 = dto.cpn2;
         //    context.Add(kntngnt);// вот тут посмотреть
         //    context.SaveChanges();
-
+            
         //}
 
-
+        
     }
 }

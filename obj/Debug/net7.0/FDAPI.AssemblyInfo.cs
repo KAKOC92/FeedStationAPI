@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FDAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+53e15ec96568f43366d82ef486dcf22a0209c076")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57e99cd5bf93377b12ddde2c84d4c9773ca912f1")]
 [assembly: System.Reflection.AssemblyProductAttribute("FDAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FDAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

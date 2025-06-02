@@ -7,7 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\FSAPIController.cs" />
+    <Compile Remove="Controllers\FSAPIController1.cs" />
     <Compile Remove="Models\TestPigsContext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Dockerfile" />
+    <None Remove="Dockerfile1" />
   </ItemGroup>
 
   
@@ -28,6 +35,10 @@
 
   <ItemGroup>
     <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>
