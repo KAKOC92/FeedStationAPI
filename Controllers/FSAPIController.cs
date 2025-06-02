@@ -215,11 +215,17 @@ namespace FeedStationWebApi.Controllers
         // когда новое животное связ с чипом, в табл chk обновить записи и проставить animid и татуировку (апдейт после смены чипа)
 
         [HttpPost("api/controller/statlog")]  // Это основной метод
-        public async Task<JsonResult> AllRecords(FSAPIContext context, String json)
+        
+        public async Task<JsonResult> AllRecords(FSAPIContext context, object obj)
         {
             try
             {
-                dynamic preObj = JsonConvert.DeserializeObject<dynamic>(json)!;
+                string jstr = JsonConvert.SerializeObject(obj);
+                Console.WriteLine("----");
+                Console.WriteLine(jstr);
+                Console.WriteLine("----");
+
+                dynamic preObj = JsonConvert.DeserializeObject<dynamic>(jstr)!;
                 Console.WriteLine(preObj.stntoiisop);
                 String stn = preObj.stntoiisop.ToString();
                 switch (stn) { 
